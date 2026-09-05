@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Archive Retention Manifest Builder · SHAR Production</title><meta name="description" content="Build a retention and restore-test manifest without uploading media."><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="../styles.css"><script type="module" src="../app.js"></script></head><body><nav><a class="brand" href="https://sharprod.com/"><span>SHAR</span> Production</a><div><a href="https://sharprod.com/open-tools/archive-retention-manifest-builder/en/" lang="en">EN</a><a href="https://sharprod.com/open-tools/archive-retention-manifest-builder/ru/" lang="ru">RU</a></div></nav><main><header><div class="eyebrow">shar-pe400-w01-14 · delivery_archive</div><h1>Archive Retention Manifest Builder</h1><p>Build a retention and restore-test manifest without uploading media.</p></header><section class="workbench" aria-label="Workbench"><div class="pane"><label for="input">Input JSON</label><textarea id="input" spellcheck="false">{
+  &quot;asOf&quot;: &quot;2026-09-05&quot;,
+  &quot;assets&quot;: [
+    {
+      &quot;id&quot;: &quot;synthetic-master&quot;,
+      &quot;storageClass&quot;: &quot;archive&quot;,
+      &quot;retentionUntil&quot;: &quot;2028-09-05&quot;,
+      &quot;legalHold&quot;: false,
+      &quot;checksum&quot;: {
+        &quot;algorithm&quot;: &quot;sha256&quot;,
+        &quot;status&quot;: &quot;pending&quot;
+      },
+      &quot;restoreOwner&quot;: &quot;archive-team&quot;,
+      &quot;replicas&quot;: 2
+    }
+  ]
+}</textarea><button id="run">Run check</button></div><div class="pane"><label for="output">Report</label><pre id="output" aria-live="polite"></pre></div></section><section class="notes"><div class="note"><strong>Deterministic rules</strong><ul><li>Require checksum value or explicit pending state.</li><li>Validate retention dates and owners.</li><li>Do not claim backup existence from a manifest.</li></ul></div><div class="note"><strong>Boundaries</strong><p>Runs in the browser by default; no input upload, analytics, account or persistence.</p><p>The tool processes entered metadata only and does not prove file or media contents.</p></div></section><a class="cta" href="https://sharprod.com/">Discuss the work with SHAR Production ↗</a><p class="privacy">Do not paste personal data, credentials, signatures or confidential media. Data stays in the browser.</p></main><footer>SHAR Production · <a href="https://sharprod.com/">sharprod.com</a> · MIT · v1.0.0</footer></body></html>

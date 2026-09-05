@@ -1,0 +1,17 @@
+{
+  "asOf": "2026-09-05",
+  "assets": [
+    {
+      "id": "synthetic-master",
+      "storageClass": "archive",
+      "retentionUntil": "2028-09-05",
+      "legalHold": false,
+      "checksum": {
+        "algorithm": "sha256",
+        "status": "pending"
+      },
+      "restoreOwner": "archive-team",
+      "replicas": 2
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sharprod.com/open-tools/delivery-package-completeness-checker/schema/input.schema.json",
+  "title": "Delivery Package Completeness Checker input",
+  "type": "object",
+  "description": "Compare a user-entered file manifest with required deliverable slots and naming rules.",
+  "required": [
+    "requiredSlots",
+    "files",
+    "namingPattern"
+  ],
+  "properties": {
+    "requiredSlots": {
+      "type": "array"
+    },
+    "files": {
+      "type": "array"
+    },
+    "namingPattern": {
+      "type": "object",
+      "required": [
+        "source",
+        "caseSensitive"
+      ]
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

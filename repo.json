@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "repository": "delivery-archive-tools",
+  "family": "delivery_archive",
+  "state": "LOCAL_READY",
+  "publisher": {
+    "name": "SHAR Production",
+    "website": "https://sharprod.com/"
+  },
+  "assets": [
+    {
+      "asset_id": "shar-pe400-w01-13",
+      "slug": "delivery-package-completeness-checker",
+      "name": {
+        "en": "Delivery Package Completeness Checker",
+        "ru": "Проверка комплектности пакета сдачи"
+      },
+      "code_license": "MIT",
+      "fixtures_license": "CC-BY-4.0"
+    },
+    {
+      "asset_id": "shar-pe400-w01-14",
+      "slug": "archive-retention-manifest-builder",
+      "name": {
+        "en": "Archive Retention Manifest Builder",
+        "ru": "Конструктор manifest хранения архива"
+      },
+      "code_license": "MIT",
+      "fixtures_license": "CC-BY-4.0"
+    }
+  ]
+}

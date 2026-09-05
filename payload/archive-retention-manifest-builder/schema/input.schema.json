@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sharprod.com/open-tools/archive-retention-manifest-builder/schema/input.schema.json",
+  "title": "Archive Retention Manifest Builder input",
+  "type": "object",
+  "description": "Build a retention and restore-test manifest without uploading media.",
+  "required": [
+    "asOf",
+    "assets"
+  ],
+  "properties": {
+    "asOf": {
+      "type": "string",
+      "format": "date"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "storageClass",
+          "legalHold",
+          "checksum",
+          "restoreOwner"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

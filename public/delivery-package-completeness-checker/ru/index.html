@@ -1,0 +1,31 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Проверка комплектности пакета сдачи · SHAR Production</title><meta name="description" content="Сопоставляет введённый файловый manifest с обязательными слотами сдачи и правилами имён."><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="../styles.css"><script type="module" src="../app.js"></script></head><body><nav><a class="brand" href="https://sharprod.com/"><span>SHAR</span> Production</a><div><a href="https://sharprod.com/open-tools/delivery-package-completeness-checker/en/" lang="en">EN</a><a href="https://sharprod.com/open-tools/delivery-package-completeness-checker/ru/" lang="ru">RU</a></div></nav><main><header><div class="eyebrow">shar-pe400-w01-13 · delivery_archive</div><h1>Проверка комплектности пакета сдачи</h1><p>Сопоставляет введённый файловый manifest с обязательными слотами сдачи и правилами имён.</p></header><section class="workbench" aria-label="Рабочая область"><div class="pane"><label for="input">Входные данные JSON</label><textarea id="input" spellcheck="false">{
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;namingPattern&quot;: {
+    &quot;source&quot;: &quot;^[a-z0-9_-]+\\.(mov|wav|srt)$&quot;,
+    &quot;caseSensitive&quot;: false
+  },
+  &quot;requiredSlots&quot;: [
+    {
+      &quot;id&quot;: &quot;master&quot;,
+      &quot;locale&quot;: &quot;en&quot;,
+      &quot;optional&quot;: false
+    },
+    {
+      &quot;id&quot;: &quot;captions&quot;,
+      &quot;locale&quot;: &quot;en&quot;,
+      &quot;optional&quot;: false
+    }
+  ],
+  &quot;files&quot;: [
+    {
+      &quot;path&quot;: &quot;campaign_master_en.mov&quot;,
+      &quot;slot&quot;: &quot;master&quot;,
+      &quot;locale&quot;: &quot;en&quot;
+    },
+    {
+      &quot;path&quot;: &quot;campaign_captions_en.srt&quot;,
+      &quot;slot&quot;: &quot;captions&quot;,
+      &quot;locale&quot;: &quot;en&quot;
+    }
+  ]
+}</textarea><button id="run">Проверить</button></div><div class="pane"><label for="output">Отчёт</label><pre id="output" aria-live="polite"></pre></div></section><section class="notes"><div class="note"><strong>Детерминированные правила</strong><ul><li>Match by declared slot and locale.</li><li>Validate names without reading file content.</li><li>Treat extras as review items, not automatic failures.</li></ul></div><div class="note"><strong>Границы</strong><p>Runs in the browser by default; no input upload, analytics, account or persistence.</p><p>Инструмент обрабатывает только введённые метаданные и не доказывает содержание файлов или медиа.</p></div></section><a class="cta" href="https://sharprod.com/">Обсудить задачу с SHAR Production ↗</a><p class="privacy">Не вставляйте персональные данные, доступы, подписи и конфиденциальные медиа. Данные остаются в браузере.</p></main><footer>SHAR Production · <a href="https://sharprod.com/">sharprod.com</a> · MIT · v1.0.0</footer></body></html>
