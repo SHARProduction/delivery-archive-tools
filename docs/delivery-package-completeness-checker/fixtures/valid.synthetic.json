@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "namingPattern": {
+    "source": "^[a-z0-9_-]+\\.(mov|wav|srt)$",
+    "caseSensitive": false
+  },
+  "requiredSlots": [
+    {
+      "id": "master",
+      "locale": "en",
+      "optional": false
+    },
+    {
+      "id": "captions",
+      "locale": "en",
+      "optional": false
+    }
+  ],
+  "files": [
+    {
+      "path": "campaign_master_en.mov",
+      "slot": "master",
+      "locale": "en"
+    },
+    {
+      "path": "campaign_captions_en.srt",
+      "slot": "captions",
+      "locale": "en"
+    }
+  ]
+}

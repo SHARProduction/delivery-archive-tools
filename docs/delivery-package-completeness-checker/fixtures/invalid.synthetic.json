@@ -1,0 +1,20 @@
+{
+  "namingPattern": {
+    "source": "^[a-z]+\\.mov$",
+    "caseSensitive": true
+  },
+  "requiredSlots": [
+    {
+      "id": "master",
+      "locale": "en",
+      "optional": false
+    }
+  ],
+  "files": [
+    {
+      "path": "EXTRA.wav",
+      "slot": "audio",
+      "locale": "en"
+    }
+  ]
+}
